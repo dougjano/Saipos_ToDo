@@ -1,0 +1,8 @@
+<div class="card" [draggable]="'true'" (dragstart)="identifyCardBeingDragged($event)"  (dragleave)="chechChangePermission($event)" id="list-{{listIndex}}-card-{{cardIndex}}" attr.listIndex="{{listIndex}}" attr.cardIndex="{{cardIndex}}" (dragover)="allowCardDragToBeDropped($event)" >
+    <div class="card-body">
+      <h2 class="card-title" [(appContentEdit)]="card.title" [draggable]="'false'" (appContentEditChange)="identifyTitleBeingEdited($event)"></h2>
+      <h4 class="text-muted card-subtitle mb-2" [(appContentEdit)]="card.description" [draggable]="'false'" (appContentEditChange)="identifyDescriptionBeingEdited($event)"></h4>
+      <h4 class="text-muted card-subtitle mb-2" [(appContentEdit)]="card.owner" [draggable]="'false'" (appContentEditChange)="identifyOwnerBeingEdited($event)"></h4>
+      <h4 class="text-muted card-subtitle mb-2" [(appContentEdit)]="card.email" [draggable]="'false'" (appContentEditChange)="identifyEmailBeingEdited($event)"></h4>
+    </div>
+  </div>
