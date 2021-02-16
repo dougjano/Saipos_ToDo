@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Saipos_ToDo.Crosscutting.Settings" GeneratedClassName="GlobalOptions">
+  <Profiles />
+  <Settings>
+    <Setting Name="Error_Task_Undo_Limit" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Undo limit has been reached!</Value>
+    </Setting>
+    <Setting Name="Value_Task_Undo_Limit" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="Mailbox_Key" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">8aaa83857f1d19b2143b7a159dad904d</Value>
+    </Setting>
+    <Setting Name="Mailbox_Url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://apilayer.net/api/check</Value>
+    </Setting>
+    <Setting Name="CatFact_Url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://cat-fact.herokuapp.com/facts</Value>
+    </Setting>
+    <Setting Name="Idle_Task_User" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Eu</Value>
+    </Setting>
+    <Setting Name="Idle_Task_Email" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">eu@me.com</Value>
+    </Setting>
+    <Setting Name="Idle_Task_Title" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Idle Task</Value>
+    </Setting>
+    <Setting Name="Connection_String" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=database.sqlite</Value>
+    </Setting>
+    <Setting Name="Auth_Hash" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TeSt!</Value>
+    </Setting>
+    <Setting Name="Auth_Key" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">q78y1]ZHnR59{nB77q0h661PM67L&amp;366V1871@d]6D$)T6AdEB53KJc66kvQ58r4H66JfJ6Eis975Tki74IZ</Value>
+    </Setting>
+    <Setting Name="Auth_Error_Message" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Invalid Password</Value>
+    </Setting>
+    <Setting Name="Value_Random_Tasks" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="Error_Format_Email" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Invalid email format, did you mean {0}?</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
