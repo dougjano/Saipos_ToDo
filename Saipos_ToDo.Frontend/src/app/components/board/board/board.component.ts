@@ -1,9 +1,8 @@
 import {Component, NgModule, OnInit} from '@angular/core';
 import {List, ListInterface} from '../../model/list/list';
 import { MovementIntf } from '../../model/card/movement';
-import {BoardModel} from '../../model/board/board';
 import { PanelService } from '../../../panel.service';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { AuthDialogComponent } from '../../auth-dialog/auth-dialog.component';
 
 @Component({
@@ -13,10 +12,9 @@ import { AuthDialogComponent } from '../../auth-dialog/auth-dialog.component';
 })
 export class BoardComponent implements OnInit {
 
-  private service: PanelService;
   lists: ListInterface[];
 
-  constructor(private panelService: PanelService, public dialog: MatDialog) { this.service = panelService }
+  constructor(private panelService: PanelService, public dialog: MatDialog) { }
 
   ngOnInit() {
 
@@ -49,6 +47,7 @@ export class BoardComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
       this.panelService.getAuth(result).then(result2 =>{
         if(result2.status == 200){
 
