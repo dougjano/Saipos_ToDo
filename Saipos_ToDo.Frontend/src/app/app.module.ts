@@ -21,6 +21,7 @@ import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.compon
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MessageDialogComponent } from './components/message-dialog/message-dialog.component';
 
 const appRoutes: Routes =[
   {path: '', component: HomeComponent}  
@@ -35,7 +36,8 @@ const appRoutes: Routes =[
     ContentEditDirective,
     ContextMenuComponent,
     BoardComponent,
-    AuthDialogComponent
+    AuthDialogComponent,
+    MessageDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,7 @@ const appRoutes: Routes =[
     MatNativeDateModule,
     ReactiveFormsModule,
   ],
-  entryComponents: [BoardComponent, AuthDialogComponent],
+  entryComponents: [BoardComponent, AuthDialogComponent, MessageDialogComponent],
   providers: [PanelService, { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } }],
   bootstrap: [AppComponent, BoardComponent],
 })

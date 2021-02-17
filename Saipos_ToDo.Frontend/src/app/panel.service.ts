@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { MessageDialogComponent } from './components/message-dialog/message-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Injectable()
 export class PanelService {
   private headers: HttpHeaders;
   private accessPointUrl: string = 'http://localhost:50162';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private dialog: MatDialog) {
   this.headers = new HttpHeaders({'Content-Type': 'application/json'});
   }
 
@@ -16,7 +18,10 @@ export class PanelService {
       return 'ok';})
       .catch((error: any) => { 
         if(error.status != 200){
-          alert(error.error);
+          this.dialog.open(MessageDialogComponent, {
+            width: '250px',
+            data: {message : error.error}
+          });
         }
         return error
     });;
@@ -32,7 +37,10 @@ export class PanelService {
       return response;})
       .catch((error: any) => {
         if(error.status != 200){
-          alert(error.error);
+          this.dialog.open(MessageDialogComponent, {
+            width: '250px',
+            data: {message : error.error}
+          });
         }
         return error
     });
@@ -56,7 +64,10 @@ export class PanelService {
     .then(response => {
       return response;})
       .catch((error: any) => {
-        alert(error.error);
+        this.dialog.open(MessageDialogComponent, {
+          width: '250px',
+          data: {message : error.error}
+        });
         return error
     });
   }
